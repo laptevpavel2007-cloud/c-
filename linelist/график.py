@@ -25,7 +25,7 @@ data_x = x * np.log(x)
 a = np.sum((data_x - np.mean(data_x)) * (y - np.mean(y))) / np.sum((data_x - np.mean(data_x))**2)
 b = np.mean(y) - a * np.mean(data_x)
 
-N_new = np.array([1250000, 1500000, 1750000, 2000000])
+N_new = np.array([1500000, 2000000, 2500000, 3000000])
 time_pred = a * N_new * np.log(N_new) + b
 
 y_pred = a * x * np.log(x) + b
